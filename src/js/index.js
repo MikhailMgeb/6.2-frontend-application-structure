@@ -1,10 +1,7 @@
-const number = function(array) {
-  if (array.length === 0) return [];
+const buttonCount = document.querySelector('.button-count');
+let count = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    array[i] = `${i+1}: ${array[i]}`;
-  }
-  return array;
-};
-
-number(['a', 'b', 'c']);
+buttonCount.addEventListener('click', () => {
+  count += 1;
+  buttonCount.textContent = count;
+});

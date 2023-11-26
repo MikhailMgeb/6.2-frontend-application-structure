@@ -9,6 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "unicorn/prevent-abbreviations": "off"
+        "unicorn/prevent-abbreviations": "off",
+        "linebreak-style": ["error", "windows"]
     }
 }
