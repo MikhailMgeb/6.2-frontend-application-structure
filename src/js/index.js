@@ -5,9 +5,9 @@
   var buttonCount, count;
   buttonCount = document.querySelector('.button-count');
   count = 0;
-  buttonCount.addEventListener('click', function () {
-    count += 1;
-    buttonCount.textContent = count;
+  buttonCount.addEventListener('click', function() {
+  count += 1;
+  buttonCount.textContent = count;
   });
 }).call(void 0);
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJidXR0b25Db3VudCIsImNvdW50IiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiYWRkRXZlbnRMaXN0ZW5lciIsInRleHRDb250ZW50Il0sInNvdXJjZXMiOlsiLi5cXC4uXFwvc3JjXFxqc1xcaW5kZXguY29mZmVlIl0sInNvdXJjZXNDb250ZW50IjpbImJ1dHRvbkNvdW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLmJ1dHRvbi1jb3VudCcpXHJcbmNvdW50ID0gMFxyXG5idXR0b25Db3VudC5hZGRFdmVudExpc3RlbmVyICdjbGljaycsIC0+XHJcbiAgY291bnQgKz0gMVxyXG4gIGJ1dHRvbkNvdW50LnRleHRDb250ZW50ID0gY291bnRcclxuICByZXR1cm4iXSwibWFwcGluZ3MiOiI7OztBQUFBO0VBQUEsSUFBQUEsV0FBQSxFQUFBQyxLQUFBO0VBQUFELFdBQUEsR0FBY0UsUUFBUSxDQUFDQyxhQUFULENBQXVCLGVBQXZCO0VBQ2RGLEtBQUEsR0FBUTtFQUNSRCxXQUFXLENBQUNJLGdCQUFaLENBQTZCLE9BQTdCLEVBQXNDO0lBQ3BDSCxLQUFBLElBQVM7SUFDVEQsV0FBVyxDQUFDSyxXQUFaLEdBQTBCSixLQUFBO0VBRlUsQ0FBdEMifQ==
