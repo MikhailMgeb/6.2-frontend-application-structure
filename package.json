@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server ./dist",
-    "build": "rm -rf dist && coffee --compile --transpile --inline-map src/js/index.coffee && babel src -d dist && cp src/index.html dist && cp -R src/css dist ",
+    "build": "rm -rf dist && coffee --compile --transpile --inline-map src/js/index.coffee && pug src/index.pug --pretty && babel src -d dist && cp src/index.html dist && cp -R src/css dist ",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix"
   },
@@ -24,6 +24,8 @@
     "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.3",
     "@shopify/stylelint-plugin": "^13.0.0",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
     "stylelint": "^15.11.0",
     "stylelint-order": "^6.0.3",
     "stylelint-semantic-groups": "^1.2.0",
