@@ -1,2 +1,6 @@
 node_modules
 dist
+
+
+npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
