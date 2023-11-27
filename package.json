@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server ./dist",
-    "build": "rm -rf dist && babel src -d dist && cp src/index.html dist && cp -R src/css dist ",
+    "build": "rm -rf dist && coffee --compile --transpile --inline-map src/js/index.coffee && babel src -d dist && cp src/index.html dist && cp -R src/css dist ",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix"
   },
