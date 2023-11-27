@@ -10,16 +10,13 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint"
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
   },
   "keywords": [],
   "author": "",
@@ -30,7 +27,7 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.29.0",
     "http-server": "14.1.1",
-    "husky": "^8.0.3",
+    "husky": "8.0.0",
     "lint-staged": "^15.1.0"
   },
   "dependencies": {
