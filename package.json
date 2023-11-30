@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server ./dist",
-    "build": "rm -rf dist && coffee --compile --transpile --inline-map src/js/index.coffee && pug src/index.pug --pretty && babel src -d dist && cp src/index.html dist && cp -R src/css dist && uglifyjs ./dist/js/index.js -o ./dist/js/index.min.js ",
+    "build": "rm -rf dist && mkdir dist && coffee -c -m -o dist/ src/ && pug src/index.pug --pretty && cp src/index.html dist && cp -R src/css dist && uglifyjs ./dist/js/index.js -o ./dist/js/index.min.js -c -m --source-map url=inline",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix"
+    "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,8 @@
     "eslint": "8.54.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.29.0",
-    "http-server": "14.1.1"
+    "http-server": "14.1.1",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@babel/cli": "7.23.4",
