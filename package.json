@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server ./dist",
-    "build": "rm -rf dist && mkdir dist && coffee -c -m -o dist/ src/ && pug src/index.pug --pretty && cp src/index.html dist && cp -R src/css dist && uglifyjs ./dist/js/index.js -o ./dist/js/index.min.js -c -m --source-map url=inline",
+    "build": "rm -rf dist && mkdir dist && coffee -c -o dist/ src/ && pug src/index.pug --out ./dist  --pretty && cp -R src/css dist && uglifyjs ./dist/js/index.js -o ./dist/js/index.min.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix",
     "prepare": "husky install"
