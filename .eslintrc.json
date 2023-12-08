@@ -1,15 +1,21 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": "airbnb-base",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
+    "parser": "eslint-plugin-coffee",
+    "plugins": [
+        "coffee"
+    ],
+    "extends": [
+        // for React projects:
+        "plugin:coffee/airbnb",
+        // OR for non-React projects:
+        "plugin:coffee/airbnb-base",
+        "plugin:coffee/import"
+    ],
     "rules": {
-        "unicorn/prevent-abbreviations": "off",
-        "linebreak-style": ["error", "windows"]
+        // You may then want to disable some of the more "controversial" Airbnb rules
+        // when applied to CoffeeScript, e.g.:
+        "coffee/implicit-arrow-linebreak": "off",
+        "coffee/comma-style": "off",
+        // Can include existing rules that "just work":
+        "import/no-unresolved": "error"
     }
 }

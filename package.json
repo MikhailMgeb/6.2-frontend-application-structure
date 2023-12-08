@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx http-server ./dist",
     "build": "rm -rf dist && mkdir dist && coffee -c -o dist/ src/ && pug src/index.pug --out ./dist  --pretty && cp -R src/css dist && uglifyjs ./dist/js/index.js -o ./dist/js/index.min.js",
-    "lint": "eslint ./src",
+    "lint": "eslint ./src/js/index.coffee",
     "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix",
     "prepare": "husky install"
   },
@@ -17,14 +17,18 @@
     "coffeescript": "2.7.0",
     "eslint": "8.54.0",
     "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-coffee": "0.1.15",
+    "eslint-plugin-coffeescript": "1.0.0",
     "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "http-server": "14.1.1",
-    "husky": "^8.0.0"
+    "husky": "8.0.0"
   },
   "dependencies": {
     "@babel/cli": "7.23.4",
     "@babel/core": "7.23.3",
     "@babel/preset-env": "7.23.3",
+    "@coffeelint/cli": "5.2.11",
     "@shopify/stylelint-plugin": "13.0.0",
     "pug": "3.0.2",
     "pug-cli": "1.0.0-alpha6",
