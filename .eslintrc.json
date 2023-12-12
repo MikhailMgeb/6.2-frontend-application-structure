@@ -4,18 +4,13 @@
         "coffee"
     ],
     "extends": [
-        // for React projects:
         "plugin:coffee/airbnb",
-        // OR for non-React projects:
         "plugin:coffee/airbnb-base",
         "plugin:coffee/import"
     ],
     "rules": {
-        // You may then want to disable some of the more "controversial" Airbnb rules
-        // when applied to CoffeeScript, e.g.:
         "coffee/implicit-arrow-linebreak": "off",
         "coffee/comma-style": "off",
-        // Can include existing rules that "just work":
         "import/no-unresolved": "error"
     }
 }
